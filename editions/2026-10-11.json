@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-11",
+  "label": "Weekend edition · Week of Oct 5–9",
+  "updatedLabel": "Sun, Oct 11, 2026",
+  "marketView": "U.S. stocks closed the week at records, but the real story is rates and energy. The Iran war and now Hurricane Isaias have pushed oil up nearly 60% this year, headline inflation is heading back up, and the Fed, which hiked in September, is signaling one more hike by December. That drove the 10-year yield to its highest level since 2002. Leadership rotated into staples, utilities and energy while small caps fell, which tells me investors are bracing for higher-for-longer rates rather than chasing growth. Core inflation is still running near 2.5%, so the key question is whether the energy shock spreads. Wednesday's CPI and this week's big-bank earnings are the next tests.",
+  "tape": [
+    {"label": "S&P 500", "value": "7,811.54", "change": "+1.2% wk", "dir": "up"},
+    {"label": "Dow", "value": "51,654.95", "change": "+0.9% wk", "dir": "up"},
+    {"label": "Nasdaq", "value": "27,366.17", "change": "+0.6% wk", "dir": "up"},
+    {"label": "Russell 2000", "value": "2,806.98", "change": "−0.9% wk", "dir": "down"},
+    {"label": "10-yr Treasury", "value": "5.24%", "change": "Hit 5.35% Wed", "dir": "flat"},
+    {"label": "Crude oil", "value": "+58.7%", "change": "Year to date", "dir": "up"},
+    {"label": "Consumer sentiment", "value": "46.3", "change": "5-month low", "dir": "down"}
+  ],
+  "stories": [
+    {
+      "rank": 1,
+      "category": "Rates",
+      "headline": "10-year Treasury yield hits its highest level since 2002",
+      "summary": "The 10-year yield touched about 5.35% on Wednesday, up roughly 60 basis points since late July, as sticky inflation, high energy costs and worries about federal debt pushed investors to demand more to lend long-term. The $39 billion 10-year auction priced at 5.300%, the highest auction yield since 2000. Bonds then rallied into Friday, and the broad bond index snapped a five-week losing streak.",
+      "why": "Almost every asset is priced off the risk-free rate. Higher long yields push up mortgage rates and corporate borrowing costs, squeeze equity valuations, and make leveraged buyouts harder to finance.",
+      "interview": "The story I'm watching is the long end of the curve. The 10-year got to 5.35% this week, the highest since 2002, driven by sticky inflation, the energy shock and deficit concerns. That's a headwind for LBO financing and for long-duration growth stocks, so I'm paying attention to how Treasury auctions clear.",
+      "coverage": 10,
+      "sources": [
+        {"name": "MPA Mag", "url": "https://www.mpamag.com/us/mortgage-industry/market-updates/treasury-yields-breach-21-year-high/592670"},
+        {"name": "Bloomberg Government", "url": "https://news.bgov.com/insurance/treasury-10-year-yield-hits-highest-since-2002-on-rate-outlook"},
+        {"name": "LPL Research", "url": "https://www.lpl.com/research/blog/weekly-market-performance-october-9-2026.html"},
+        {"name": "Stocktwits", "url": "https://stocktwits.com/news-articles/markets/equity/treasury-yields-hit-24-year-highs-ahead-of-39-b-10-year-note-sale-danske-reportedly-sees-risk-of-6-as-pressure-builds/cZDviwKRBmU"}
+      ]
+    },
+    {
+      "rank": 2,
+      "category": "Fed",
+      "headline": "Fed minutes point to another rate hike by year-end",
+      "summary": "Minutes from the September meeting show officials raised rates by a quarter point and most expect another increase will likely be needed before the end of the year. Markets put the odds of a December hike around 84%, versus about 17% for this month. Officials agreed inflation is too high but split on the reason to act: some see hikes as insurance, others want to stop energy- and AI-driven demand from spreading into broader inflation.",
+      "why": "The Fed is tightening in a year many expected cuts. That helps bank net interest income but pressures housing, credit and rate-sensitive stocks.",
+      "interview": "Unusually, the Fed is tightening into an energy supply shock. The September minutes signal one more hike by December, and futures agree. The internal debate is whether an oil-driven price spike turns into broader inflation, which is why Wednesday's CPI matters.",
+      "coverage": 9,
+      "sources": [
+        {"name": "Scotsman Guide", "url": "https://www.scotsmanguide.com/news/fed-policymakers-saw-multiple-2026-rate-hikes-as-likely-september-fomc-minutes-show/"},
+        {"name": "Asia Economy", "url": "https://view.asiae.co.kr/en/article/2026100804564226796"},
+        {"name": "BabyPips", "url": "https://www.babypips.com/news/headline-sept-fomc-minutes-support-hawkish-stance-2026-10-08"},
+        {"name": "FXStreet", "url": "https://www.fxstreet.com/news/federal-reserve-more-hikes-ahead-after-october-pause-uob-202610081303"}
+      ]
+    },
+    {
+      "rank": 3,
+      "category": "Energy",
+      "headline": "Hurricane Isaias knocks out ~63% of Gulf oil output on top of the Iran war shock",
+      "summary": "By Thursday, producers had shut in about 1.28 million barrels a day, roughly 63% of Gulf offshore oil, plus 57% of gas output. Isaias strengthened to Category 3 and was forecast to hit the Alabama–northwest Florida coast late Friday or early Saturday, with about 500,000 barrels a day of refining capacity near its path. It arrives with U.S. diesel stocks at their lowest seasonal level since EIA records began in 1982 and oil up nearly 60% this year as the Iran war constrains tanker traffic through the Strait of Hormuz.",
+      "why": "Energy is the channel from geopolitics to inflation to the Fed. Watch how quickly platforms and refineries restart this week; a slow recovery means higher fuel prices into winter.",
+      "interview": "Energy is the swing factor for everything else right now. Oil is up almost 60% this year because of the Iran war, and Isaias just took nearly two-thirds of Gulf production offline while diesel inventories are at record seasonal lows. That feeds straight into headline inflation and the Fed's next move.",
+      "coverage": 9,
+      "sources": [
+        {"name": "gCaptain", "url": "https://gcaptain.com/hurricane-isaias-shuts-down-nearly-two-thirds-of-gulf-oil-production/"},
+        {"name": "Insurance Business", "url": "https://www.insurancebusinessmag.com/us/news/catastrophe/isaias-hits-category-3-as-gulf-oil-shutins-reach-63-and-diesel-stocks-sit-at-a-record-seasonal-low-592871.aspx"},
+        {"name": "Maritime Executive", "url": "https://maritime-executive.com/article/hurricane-isaias-prompts-shut-ins-for-60-percent-of-gulf-oil-production"},
+        {"name": "WLOX", "url": "https://www.wlox.com/2026/10/09/isaias-could-create-higher-fuel-prices-heres-why/"}
+      ]
+    },
+    {
+      "rank": 4,
+      "category": "Banks",
+      "headline": "Big-bank earnings kick off Tuesday with JPMorgan, Goldman and Wells Fargo",
+      "summary": "Third-quarter bank results start Tuesday with JPMorgan, Goldman Sachs and Wells Fargo, followed by Bank of America, Morgan Stanley and BlackRock on Wednesday. Analysts expect JPMorgan to earn about $5.90 a share on $51.3 billion of revenue, with net interest income up around 12% but trading revenue down about 18%.",
+      "why": "Bank results are the best read on deal flow, trading activity and credit quality. Higher rates are boosting lending income while volatility and a tougher financing backdrop weigh on other businesses.",
+      "interview": "Bank earnings this week will show the trade-off higher rates create. Net interest income should be strong, but trading is expected to be down year over year. I'll be listening for what management says about the M&A and IPO pipeline and whether credit losses are starting to rise.",
+      "coverage": 6,
+      "sources": [
+        {"name": "CMC Markets", "url": "https://www.cmcmarkets.com/en-ie/news-and-analysis/the-week-ahead-us-cpi-eurozone-cpi-jpmorgan-earnings"},
+        {"name": "Schwab Network", "url": "https://cms.schwabnetwork.com/video/banking-s-big-picture-ahead-of-jpm-wfc-gs-other-big-bank-earnings"},
+        {"name": "TipRanks", "url": "https://www.tipranks.com/news/the-fly/heres-what-wall-st-experts-are-saying-about-these-banks-ahead-of-earnings-thefly-3"}
+      ]
+    },
+    {
+      "rank": 5,
+      "category": "Earnings",
+      "headline": "Delta slashes its 2026 profit outlook on a $6 billion fuel bill",
+      "summary": "Delta cut its full-year earnings forecast to $5.10–$5.60 a share from $6.50–$7.50 and now expects fuel costs to rise about $6 billion this year. Third-quarter adjusted EPS of $1.72 narrowly missed estimates as fuel expense jumped 62% to $4.1 billion. Demand is still strong and fares are up about 25% from a year ago, but the airline expects fuel to cost $4.25 a gallon in the fourth quarter.",
+      "why": "This is one of the first big reads on how the energy shock hits corporate margins, and a test of how much higher prices consumers will absorb.",
+      "interview": "Delta is a clean case study in pricing power against input costs. Fares are up about 25%, demand is holding, but a $6 billion fuel increase still forced a big guidance cut. The question for the rest of earnings season is which companies can keep passing costs through.",
+      "coverage": 8,
+      "sources": [
+        {"name": "CP24 / Reuters", "url": "https://www.cp24.com/news/money/2026/10/09/delta-air-cuts-profit-forecast-as-us6-billion-fuel-cost-surge-outweighs-fare-gains/"},
+        {"name": "BNN Bloomberg", "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/09/delta-air-cuts-profit-forecast-as-us6-billion-fuel-cost-surge-outweighs-fare-gains"},
+        {"name": "Airways", "url": "https://airwaysmag.com/new-post/delta-cuts-2026-profit-outlook-fuel-costs"}
+      ]
+    },
+    {
+      "rank": 6,
+      "category": "Equities",
+      "headline": "S&P 500 sets a record, but defensive sectors led the way",
+      "summary": "The S&P 500 rose 1.2% for the week to 7,811.54 after hitting a record earlier in the week, and is up about 14% this year. Consumer staples, utilities and energy each gained close to 4%, while technology and industrials slipped and the Russell 2000 small-cap index fell 0.9%.",
+      "why": "When defensives and energy lead a rally, investors are positioning for higher rates and slower growth rather than a broad risk-on move. Small caps lagging fits that picture, since they are most exposed to borrowing costs.",
+      "interview": "Indexes are at records, but the leadership tells you more than the level. Staples, utilities and energy led while small caps fell, which looks like investors hedging against higher-for-longer rates rather than betting on growth.",
+      "coverage": 5,
+      "sources": [
+        {"name": "La Nación / AP", "url": "https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-1092026-nid09102026/"},
+        {"name": "LPL Research", "url": "https://www.lpl.com/research/blog/weekly-market-performance-october-9-2026.html"}
+      ]
+    },
+    {
+      "rank": 7,
+      "category": "Tech",
+      "headline": "Samsung and TSMC post huge AI-driven numbers, and their stocks barely react",
+      "summary": "Samsung guided to a record third-quarter operating profit of about 107 trillion won (roughly $80 billion), slightly above estimates, but revenue fell short of consensus and its shares closed 2.4% lower. TSMC said third-quarter sales rose about 50%, ahead of expectations. TSMC reports full results and guidance on Thursday.",
+      "why": "The AI buildout is still accelerating, but expectations are so high that beats alone no longer move the stocks. Guidance is what matters now.",
+      "interview": "AI demand is clearly still accelerating: Samsung just posted a record $80 billion quarterly profit and TSMC sales are up 50%. But both stocks barely moved, which tells you the good news is priced in. TSMC's guidance on Thursday is the next real signal.",
+      "coverage": 6,
+      "sources": [
+        {"name": "Stocktwits", "url": "https://stocktwits.com/news-articles/markets/equity/mu-tsm-stocks-dip-overnight-as-samsung-forecasts-record-80-b-operating-profit-in-q3/cZDUBzORBZx"},
+        {"name": "Focus Taiwan", "url": "https://focustaiwan.tw/business/202610080012"},
+        {"name": "Euronews", "url": "https://arabic.euronews.com/2026/10/08/samsung-reports-a-783-profit-increase-to-a-record-80bn-as-the-ai-chip-boom-also-boosts-tsm"}
+      ]
+    },
+    {
+      "rank": 8,
+      "category": "Macro",
+      "headline": "Consumer sentiment slides to a five-month low as inflation expectations rise",
+      "summary": "The University of Michigan's preliminary October index fell to 46.3. Year-ahead inflation expectations rose to 4.7% and long-run expectations to 3.5%. The drop was steepest among lower-income households, and respondents cited high prices, energy costs and borrowing costs.",
+      "why": "Rising inflation expectations are exactly what the Fed worries about, and a squeezed consumer is a risk for spending, which drives most of the U.S. economy.",
+      "interview": "Consumer sentiment is near historic lows and inflation expectations are creeping up, with year-ahead expectations at 4.7%. That gives the Fed less room to pause and is a warning sign for consumer-facing companies heading into the holidays.",
+      "coverage": 5,
+      "sources": [
+        {"name": "Advisor Perspectives", "url": "https://www.advisorperspectives.com/dshort/updates/2026/10/09/consumer-sentiment-falls-again-in-october"},
+        {"name": "InvestingLive", "url": "https://investinglive.com/news/us-october-umich-prelim-consumer-sentiment-vs-47-8-expected/"}
+      ]
+    }
+  ],
+  "calendar": [
+    {"day": "Mon 12", "items": ["Columbus Day: bond market closed, stocks open", "Fed's Hammack speaks"]},
+    {"day": "Tue 13", "items": ["Earnings: JPMorgan, Goldman Sachs, Wells Fargo", "Germany CPI"]},
+    {"day": "Wed 14", "items": ["U.S. CPI (est. 3.6% y/y headline, 2.5% core)", "Earnings: Bank of America, Morgan Stanley, BlackRock", "Fed Beige Book"]},
+    {"day": "Thu 15", "items": ["U.S. retail sales and PPI", "Earnings: TSMC, Charles Schwab, PNC, BNY"]},
+    {"day": "Fri 16", "items": ["U.S. industrial production", "Eurozone CPI", "Earnings: Truist, Regions, M&T"]}
+  ]
+}

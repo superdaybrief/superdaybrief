@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A free daily market briefing for finance recruiting: the most important stories, ranked, with a 60-second market view and interview talking points.">
+<meta property="og:title" content="Superday Brief">
+<meta property="og:description" content="A free daily market briefing for finance recruiting: the most important stories, ranked, with a 60-second market view and interview talking points.">
+<title>Superday Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a trading-desk morning note. Masthead + market tape across the top, the 60-second view as the thesis,
+   then a ranked story column beside a sticky week-ahead rail (stacks to one column on phones). */
+:root{
+  --bg:#F2F3EF;        /* cool paper with a faint green bias */
+  --surface:#FFFFFF;
+  --ink:#0F1419;
+  --muted:#5B6570;
+  --line:#D9DDD6;
+  --accent:#1E4FD8;    /* cobalt: links, ranks, focus */
+  --accent-soft:#E3EAFB;
+  --up:#16794A; --down:#B4322A;
+  --pull:#0F1419; --pull-fg:#F2F3EF;
+  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-data:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1216; --surface:#161C22; --ink:#E8ECEA; --muted:#97A2AC; --line:#2A333C;
+    --accent:#7FA3FF; --accent-soft:#1C2A4A; --up:#4CC48A; --down:#FF7D72;
+    --pull:#E8ECEA; --pull-fg:#0E1216; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1216; --surface:#161C22; --ink:#E8ECEA; --muted:#97A2AC; --line:#2A333C;
+  --accent:#7FA3FF; --accent-soft:#1C2A4A; --up:#4CC48A; --down:#FF7D72;
+  --pull:#E8ECEA; --pull-fg:#0E1216; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:var(--s5) var(--s7)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.mono{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-data);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* Masthead */
+.mast{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--s4);border-bottom:2px solid var(--ink);padding-bottom:var(--s3)}
+.brand{display:flex;flex-direction:column;gap:2px;min-width:0}
+.brand h1{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,6vw,56px);line-height:.95;letter-spacing:-.03em;margin:0}
+.brand h1 span{color:var(--accent)}
+.brand p{margin:0;color:var(--muted);font-family:var(--f-display);font-weight:500;font-size:15px}
+.edition{display:flex;flex-direction:column;align-items:flex-end;gap:var(--s2)}
+.edition select{font-family:var(--f-data);font-size:13px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+.edition .label{font-family:var(--f-data);font-size:12.5px;color:var(--muted);text-align:right}
+
+/* Tape */
+.tape{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:0;border-bottom:1px solid var(--line);margin-bottom:var(--s6)}
+.tick{padding:var(--s3) var(--s3) var(--s3) 0;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tick + .tick{padding-left:var(--s3);border-left:1px solid var(--line)}
+.tick .k{font-family:var(--f-data);font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tick .v{font-family:var(--f-data);font-size:18px;font-weight:500}
+.tick .c{font-family:var(--f-data);font-size:12.5px}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
+
+/* Thesis */
+.view{background:var(--pull);color:var(--pull-fg);border-radius:14px;padding:clamp(20px,4vw,36px);margin-bottom:var(--s6);display:grid;gap:var(--s3)}
+.view .eyebrow{color:inherit;opacity:.7}
+.view p{font-family:var(--f-display);font-weight:500;font-size:clamp(19px,2.4vw,24px);line-height:1.38;letter-spacing:-.01em;margin:0;max-width:62ch;text-wrap:pretty}
+.view .actions{display:flex;gap:var(--s2);flex-wrap:wrap}
+.btn{font-family:var(--f-data);font-size:12.5px;border-radius:999px;padding:6px 14px;cursor:pointer;border:1px solid currentColor;background:transparent;color:inherit}
+.btn:hover{background:color-mix(in srgb, currentColor 10%, transparent)}
+
+/* Main grid */
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--s6);align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+
+.filters{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s4)}
+.chip{font-family:var(--f-data);font-size:12px;letter-spacing:.03em;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.stories{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.story{display:grid;grid-template-columns:56px minmax(0,1fr);gap:var(--s4);padding-block:var(--s5);border-top:1px solid var(--line)}
+.rank{font-family:var(--f-display);font-weight:800;font-size:40px;line-height:1;color:var(--accent);letter-spacing:-.04em}
+.meta{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3);align-items:center;margin-bottom:var(--s2)}
+.cat{font-family:var(--f-data);font-size:11px;text-transform:uppercase;letter-spacing:.08em;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:4px}
+.cov{font-family:var(--f-data);font-size:11.5px;color:var(--muted)}
+.story h2{font-family:var(--f-display);font-weight:700;font-size:clamp(20px,2.4vw,25px);line-height:1.18;letter-spacing:-.02em;margin:0 0 var(--s2);text-wrap:balance}
+.story .sum{margin:0 0 var(--s3);max-width:66ch}
+.why{margin:0 0 var(--s3);max-width:66ch;color:var(--ink)}
+.why b{font-family:var(--f-display);font-weight:700}
+.say{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:var(--s3) var(--s4);display:grid;gap:var(--s2);max-width:66ch}
+.say .row{display:flex;justify-content:space-between;align-items:center;gap:var(--s2)}
+.say p{margin:0;font-style:italic}
+.copy{font-family:var(--f-data);font-size:11.5px;border:none;background:none;color:var(--accent);cursor:pointer;padding:2px 4px}
+.srcs{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3);margin-top:var(--s3);font-family:var(--f-data);font-size:12px}
+.srcs a{text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--accent) 40%, transparent)}
+.srcs a:hover{border-bottom-color:var(--accent)}
+
+/* Rail */
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);display:flex;flex-direction:column;gap:var(--s5)}
+@media (max-width:860px){.rail{position:static}}
+.rail h3{font-family:var(--f-display);font-weight:700;font-size:18px;margin:0 0 var(--s3);letter-spacing:-.01em}
+.day{display:grid;grid-template-columns:52px minmax(0,1fr);gap:var(--s3);padding-block:var(--s3);border-top:1px solid var(--line)}
+.day .d{font-family:var(--f-data);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.day ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px;line-height:1.4}
+.how{font-size:14px;color:var(--muted);border-top:2px solid var(--ink);padding-top:var(--s3)}
+.how p{margin:0 0 var(--s2)}
+
+.empty{border:1px dashed var(--line);border-radius:12px;padding:var(--s6);text-align:center;color:var(--muted);font-family:var(--f-display)}
+.empty strong{display:block;color:var(--ink);font-size:20px;margin-bottom:var(--s2)}
+footer{margin-top:var(--s7);font-family:var(--f-data);font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:var(--s3)}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--bg);font-family:var(--f-data);font-size:12.5px;padding:8px 14px;border-radius:999px}
+@media (prefers-reduced-motion: no-preference){
+  .story{animation:rise .4s ease both}
+  @keyframes rise{from{transform:translateY(6px)}to{transform:none}}
+}
+.about{margin-top:var(--s7);max-width:68ch;font-size:15px;color:var(--muted)}
+.about h3{font-family:var(--f-display);font-weight:700;font-size:18px;color:var(--ink);margin:0 0 var(--s2)}
+.about p{margin:0 0 var(--s3)}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} body{margin:0} [hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <div class="brand">
+      <span class="eyebrow">The market view for finance recruiting</span>
+      <h1>Superday<span>.</span>Brief</h1>
+      <p>Every story that matters, in one place. Read it in ten minutes, talk about it for thirty.</p>
+    </div>
+    <div class="edition">
+      <label class="eyebrow" for="ed">Edition</label>
+      <select id="ed" aria-label="Choose an edition"><option>Loading…</option></select>
+      <span class="label" id="edlabel"></span>
+    </div>
+  </header>
+
+  <section class="tape" id="tape" aria-label="Market snapshot"></section>
+
+  <main id="main">
+    <div class="empty" id="empty">
+      <strong>Today's brief is loading</strong>
+      The ranked stories, market snapshot and week-ahead calendar appear here once the edition is fetched.
+    </div>
+  </main>
+
+
+  <section class="about" id="about" aria-label="About">
+    <h3>About Superday Brief</h3>
+    <p>Superday Brief is a free daily market briefing for students recruiting for banking, sales &amp; trading and buy-side roles. Each edition is put together from coverage across major financial outlets. Duplicate stories are merged, then ranked by how widely they're covered and how directly they affect rates, earnings, deals and the broad market.</p>
+    <p>Headlines and summaries are written by Superday Brief in our own words, with links to the original reporting. New editions publish before the market opens and after it closes on weekdays, plus a week-ahead edition on Sundays.</p>
+  </section>
+
+  <footer>
+    Headlines link to the original publishers. Summaries and talking points are written by Superday Brief and are for interview prep, not investment advice.
+  </footer>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const $ = (s, el=document) => el.querySelector(s);
+function h(tag, attrs={}, ...kids){
+  const el = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)){
+    if (k === "class") el.className = v;
+    else if (k === "text") el.textContent = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v);
+  }
+  for (const kid of kids.flat()) if (kid != null) el.append(kid);
+  return el;
+}
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(toast._t); toast._t = setTimeout(()=>{ t.hidden = true; }, 1600);
+}
+async function copyText(text, btn){
+  try { await navigator.clipboard.writeText(text); toast("Copied"); }
+  catch(e){
+    const p = btn.closest(".say, .view")?.querySelector("p");
+    if (p){ const r = document.createRange(); r.selectNodeContents(p); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    toast("Text selected — press Ctrl/Cmd+C");
+  }
+}
+function fmtDate(iso){
+  const [y,m,d] = iso.split("-").map(Number);
+  return new Date(y, m-1, d).toLocaleDateString("en-US",{weekday:"short", month:"short", day:"numeric", year:"numeric"});
+}
+
+let editions = [];
+let current = null;
+let filter = "All";
+
+function renderTape(ed){
+  const tape = $("#tape"); tape.replaceChildren();
+  (ed.tape || []).forEach(t => {
+    tape.append(h("div",{class:"tick"},
+      h("span",{class:"k", text:t.label}),
+      h("span",{class:"v", text:t.value}),
+      h("span",{class:"c " + (t.dir || "flat"), text:t.change || ""})
+    ));
+  });
+  tape.hidden = !(ed.tape && ed.tape.length);
+}
+
+function renderMain(ed){
+  const main = $("#main"); main.replaceChildren();
+  if (ed.marketView){
+    main.append(h("section",{class:"view", "aria-label":"60-second market view"},
+      h("span",{class:"eyebrow", text:"Your 60-second market view"}),
+      h("p",{text:ed.marketView}),
+      h("div",{class:"actions"},
+        h("button",{class:"btn", type:"button", onclick:e=>copyText(ed.marketView, e.currentTarget)}, "Copy the pitch"))
+    ));
+  }
+  const stories = (ed.stories || []).slice().sort((a,b)=>(a.rank||99)-(b.rank||99));
+  const cats = ["All", ...new Set(stories.map(s=>s.category).filter(Boolean))];
+  if (!cats.includes(filter)) filter = "All";
+
+  const filters = h("div",{class:"filters", role:"group", "aria-label":"Filter stories by topic"});
+  cats.forEach(c => filters.append(h("button",{class:"chip", type:"button", "aria-pressed": String(c===filter),
+    onclick:()=>{ filter = c; renderMain(ed); }}, c)));
+
+  const list = h("ol",{class:"stories"});
+  stories.filter(s => filter==="All" || s.category===filter).forEach(s => {
+    const srcs = h("div",{class:"srcs"}, h("span",{class:"cov", text:"Read more:"}),
+      (s.sources||[]).map(src => h("a",{href:src.url, target:"_blank", rel:"noopener", text:src.name})));
+    list.append(h("li",{class:"story"},
+      h("div",{class:"rank mono", "aria-label":"Rank " + s.rank, text:String(s.rank).padStart(2,"0")}),
+      h("div",{style:"min-width:0"},
+        h("div",{class:"meta"},
+          s.category ? h("span",{class:"cat", text:s.category}) : null,
+          s.coverage ? h("span",{class:"cov", text:"Covered by " + s.coverage + " outlets"}) : null),
+        h("h2",{text:s.headline}),
+        h("p",{class:"sum", text:s.summary}),
+        s.why ? h("p",{class:"why"}, h("b",{text:"Why it matters. "}), s.why) : null,
+        s.interview ? h("div",{class:"say"},
+          h("div",{class:"row"},
+            h("span",{class:"eyebrow", text:"Say it in the interview"}),
+            h("button",{class:"copy", type:"button", onclick:e=>copyText(s.interview, e.currentTarget)}, "Copy")),
+          h("p",{text:"“" + s.interview + "”"})) : null,
+        srcs
+      )
+    ));
+  });
+
+  const rail = h("aside",{class:"rail"});
+  if (ed.calendar && ed.calendar.length){
+    const cal = h("section",{}, h("h3",{text:"The week ahead"}));
+    ed.calendar.forEach(d => cal.append(h("div",{class:"day"},
+      h("span",{class:"d", text:d.day}),
+      h("ul",{}, (d.items||[]).map(i => h("li",{text:i}))))));
+    rail.append(cal);
+  }
+  rail.append(h("section",{class:"how"},
+    h("p",{}, h("b",{text:"How stories are ranked. "}), "We pull from dozens of outlets, merge duplicate coverage of the same event, then rank by how widely it's covered and how directly it moves rates, earnings or deals."),
+    h("p",{text:"Updated " + (ed.updatedLabel || fmtDate(ed.date)) + "."})
+  ));
+
+  main.append(h("div",{class:"grid"}, h("section",{"aria-label":"Top stories"}, filters, list), rail));
+}
+
+function render(){
+  if (!current) return;
+  $("#edlabel").textContent = current.label || "";
+  renderTape(current);
+  renderMain(current);
+}
+
+function renderPicker(){
+  const sel = $("#ed"); sel.replaceChildren();
+  editions.forEach(ed => sel.append(h("option",{value:ed.date, text:fmtDate(ed.date)})));
+  if (current) sel.value = current.date;
+}
+$("#ed").addEventListener("change", async e => {
+  const i = editions.findIndex(x => x.date === e.target.value);
+  if (i < 0) return;
+  if (editions[i]._stub){
+    try { editions[i] = await fetch("editions/" + editions[i].date + ".json").then(r => r.json()); }
+    catch(err){ toast("That edition couldn't load"); return; }
+  }
+  current = editions[i]; render();
+});
+
+function showEmpty(title, body){
+  $("#main").replaceChildren(h("div",{class:"empty"}, h("strong",{text:title}), body));
+  $("#tape").replaceChildren();
+}
+
+(async () => {
+  try {
+    const idx = await fetch("editions/index.json", {cache:"no-store"}).then(r => { if(!r.ok) throw 0; return r.json(); });
+    const dates = (idx.editions || []).slice(0, 60);
+    if (!dates.length){ showEmpty("No edition published yet", "The first brief appears here as soon as it's published."); return; }
+    const first = await fetch("editions/" + dates[0] + ".json", {cache:"no-store"}).then(r => r.json());
+    editions = [first, ...dates.slice(1).map(d => ({date:d, _stub:true}))];
+    current = first; renderPicker(); render();
+  } catch(e){
+    showEmpty("The brief couldn't load", "Reload the page to try again.");
+  }
+})();
+</script>
+</body>
+</html>
